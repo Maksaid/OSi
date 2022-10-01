@@ -1,12 +1,10 @@
 #!/bin/bash
 
-str=""
-printf "Введите строку: "
+result=""
 read tmp
 while [[ $tmp != "q" ]]
 do
-  str="$str $tmp"
-  printf "Введите строку:"
+  result="$str $tmp"
   read tmp
 done
-printf "Строка: $str\n"
+printf $result
