@@ -1,5 +1,4 @@
 #!/bin/bash
 
-awk '$3 == "(WW)" {$3="Warning: "; print $0}' /var/log/anaconda/X.log > full.log
-awk '$3 == "(II)" {$3="Information: "; print $0}' /var/log/anaconda/X.log >> full.log
-cat full.log
+sed -n 's/(II)/Information:/p' /var/log/anaconda/X.log | sed 1d > full.log
+sed -n 's/(WW)/Warning:/p' /var/log/anaconda/X.log >> full.log
