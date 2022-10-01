@@ -1,9 +1,8 @@
 #!/bin/bash
 if [[ $PWD == $HOME ]]
-then
-    printf "$HOME\n"
+then echo $HOME
     exit 0
 else
-    printf "Ошибка!\n"
-    exit 1
+echo "Error"
+exit 1
 fi
