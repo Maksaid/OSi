@@ -1,3 +1,4 @@
 #!/bin/bash
 
-car var/log/*.log | wc -l
+# concatanaiting all files and wc -l outputs their count
+cat var/log/*.log | wc -l
