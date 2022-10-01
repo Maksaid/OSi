@@ -1,3 +1,3 @@
 #!/bin/bash
-
-awk '$2 == "INFO" {print $0}' /var/log/anaconda/syslog > info.log
+# -w means we serach exact word INFO 
+grep -w 'INFO' /var/log/anaconda/syslog > info.log
