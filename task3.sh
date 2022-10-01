@@ -1,20 +1,28 @@
 #!/bin/bash
 
-printf "   МЕНЮ\n1) Запустить Nano\n2) Запустить Vi\n3) Запустить Links\n4) Выход\n"
-printf "Введите команду: "
-read cmd
-if [[ cmd -eq 1 ]]
-then
-    nano
-elif [[ cmd -eq 2 ]]
-then
-    vi
-elif [[ cmd -eq 3 ]]
-then
-    links
-elif [[ cmd -eq 4 ]]
-then
-    exit
-else
-    printf "Неизвестная команда!\n"
-fi
+echo "1 nano"
+echo "2 vi"
+echo "3 links"
+read c
+case $c in
+
+1)
+nano
+;;
+
+2)
+vi
+;;
+
+3)
+links
+;;
+
+4)
+break;
+;;
+
+*)
+echo "nothing"
+;;
+esac
